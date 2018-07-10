@@ -1,0 +1,66 @@
+<meta name="referrer" content="no-referrer" />
+<meta charset="utf-8" />
+<a href="https://www.zhihu.com/people/andrew-shen-29" class="internal">
+	andrew shen
+</a>
+<br>
+<br>
+全反射的本质就是，在一个介质中激发出的实传播模，在另外一个介质中会激发出倏逝波（evanescent mode）。究其原因，就是k波数在平行界面的方向上，两个介质的模式必须相等，才能处处满足边界条件；而在垂直于平行界面的方向上，光密介质中的总k数比较大，因此分解之后，此方向上的k依然是实数；光疏介质中的总k数比较小，分解之后，此方向上的k就是虚数了。一个例子可以说明问题：
+<br>
+假定真空中，平面波的波数是
+<img src="https://www.zhihu.com/equation?tex=k_0" alt="k_0" eeimg="1">
+<br>
+; 现在有两个介质，介质1的折射率是
+<img src="https://www.zhihu.com/equation?tex=n_1%3D3.5" alt="n_1=3.5" eeimg="1">
+<br>
+, 介质2是
+<img src="https://www.zhihu.com/equation?tex=n_2%3D1.5" alt="n_2=1.5" eeimg="1">
+<br>
+. 现在，此平面波从介质1中以
+<img src="https://www.zhihu.com/equation?tex=%5Ctheta%3D30" alt="\theta=30" eeimg="1">
+<br>
+度的斜入射进入介质2:
+<br>
+我们可以知道，介质1中，此波平行于界面的波数分量是：
+<br>
+<img src="https://www.zhihu.com/equation?tex=k_%5Cupdownarrow+%3Dn_1k_0sin%28%5Ctheta%29+%3D1.75k_0" alt="k_\updownarrow =n_1k_0sin(\theta) =1.75k_0" eeimg="1">
+<br>
+介质2中，首激的本征模必须在平行界面拥有相同的波数。那么在垂直界面的方向上，其波数就是：
+<br>
+<img src="https://www.zhihu.com/equation?tex=k_%5Cbot+%3D%5Csqrt%7B%28n_2k_0%29%5E2-%281.75k_0%29%5E2%7D%3D0.901388I+k_0+" alt="k_\bot =\sqrt{(n_2k_0)^2-(1.75k_0)^2}=0.901388I k_0 " eeimg="1">
+<br>
+是一个虚数。
+<br>
+这中模式的含义就是倏逝波，不沿着垂直界面的方向传播（可以理解为不沿着远离界面的方向传播，也就是不传播）。
+<br>
+容易计算，发生此类模激发的条件，就是当
+<img src="https://www.zhihu.com/equation?tex=k_%5Cbot" alt="k_\bot" eeimg="1">
+<br>
+恰好成为虚数的时候，也就是：
+<br>
+<img src="https://www.zhihu.com/equation?tex=k_%5Cupdownarrow%3Dn_2k_0" alt="k_\updownarrow=n_2k_0" eeimg="1">
+<br>
+因此有：
+<br>
+<img src="https://www.zhihu.com/equation?tex=%5Ctheta_c%3Darcsin%28n_2%2Fn_1%29" alt="\theta_c=arcsin(n_2/n_1)" eeimg="1">
+<br>
+.
+<br>
+不仅仅全反射会出现倏逝波，实际上倏逝波无处不在。广泛存在于：边界散射（例如，小孔散射），波导模式，周期结构的本征模等之中。而两个半无穷大的平面组成的界面折／反射问题，是最简单的模式匹配问题。这一类问题的最终版本叫做RCWA，可以求解一系列具有对称性结构的模式激发。
+<br>
+倏逝波虽然不传播能量，但是它能影响边界条件激发模的相位。例如在折／反射问题中。如果激发了倏逝波，那么反射波的相位就会发生重大的变化，而非倏逝波之前的简单的0或者180度了。
+<br>
+<br>
+see also：
+<br>
+请看 
+<a href="https://link.zhihu.com/?target=http%3A//blog.renren.com/blog/223331581/862267210%3Fbfrom%3D010203012" class=" wrap external" target="_blank" rel="nofollow noreferrer">
+	电磁折射：未言尽的秘密
+	<i class="icon-external">
+	</i>
+</a>
+<br>
+或者 
+<a href="http://www.zhihu.com/question/19766271" class="internal">
+	如何从微观角度解释光的反射和折射？
+</a>
