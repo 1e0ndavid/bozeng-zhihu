@@ -1,0 +1,43 @@
+<meta name="referrer" content="no-referrer" />
+<meta charset="utf-8" />
+实际上结论就是，如果你的lambda表达式不给定local的default input的话，他并不会记住每次你给他定义时，让他输出的所谓local variable i
+<br>
+例如odd()函数中的i，看起来是 for i 中的i，其实已经变成了lambda表达式中的本地i。因为i是一个新的变量，他的值和外部的for没有任何关系。
+<br>
+no_odd（）当然是错误的因为你的lambda表达式需要一个input，而你的for_iter里面的print 没有input。
+<br>
+f_odd（）之所以输出正确是因为你给他的input变量i 一个默认值，i（这个i是for里面的i）。因此你不输入任何input，他就会根据默认值输出i。
+<br>
+a_odd （）之所以错误是因为虽然你给a正确的默认值，但是你的输出不是a，而是i。这个i是没有定义的。因此这就犯下了和odd()一样的错误。如果你把a_odd（）改成
+<br>
+def a_odd():
+<br>
+f=[]
+<br>
+for i in 'abcdefg':
+<br>
+f.append((lambda a=i:a))
+<br>
+return f
+<br>
+你就会得到正确的答案。
+<br>
+<br>
+至于为什么1，4两个函数最后输出的都是'ggggggg'，那是因为，在最后return f的时候，function会检查lambda表达式中的i。如果i不是lambda的输出参数，那么python就会检查i是不是一个全局参数。这时候function里面的i的值是‘g’，那么于是所有的lambda表达式里面的i都被替换成‘g’了。
+<br>
+<br>
+尝试下面的代码：
+<br>
+def a_odd():
+<br>
+    f=[]
+<br>
+    for i in 'abcdefg':
+<br>
+        f.append((lambda a=i:i))
+<br>
+    i='s'
+<br>
+    return f
+<br>
+你会发现输出全部都是‘ssssss’；
