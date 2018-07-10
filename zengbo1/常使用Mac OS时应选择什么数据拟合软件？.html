@@ -1,0 +1,18 @@
+<meta name="referrer" content="no-referrer" />
+<meta charset="utf-8" />
+Mathematica 的数据处理效果是很好的，以数据拟合为例：
+<br>
+<br>
+Directory[]
+<br>
+<br>
+data=Import["data.csv","table"];
+<br>
+<br>
+f= a*sin(x);
+<br>
+<br>
+model=NonlinearModelFit(data,f,{a},x);
+<br>
+<br>
+Show[{Plot[Normal[model],{x,xmin,xmas}],ListPlot[data]}]
