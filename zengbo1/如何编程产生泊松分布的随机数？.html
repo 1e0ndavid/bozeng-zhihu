@@ -1,0 +1,42 @@
+<meta name="referrer" content="no-referrer" />
+<meta charset="utf-8" />
+你说的这个问题叫做Poisson过程，其产生的思路如下:
+<br>
+1，从
+<img src="https://www.zhihu.com/equation?tex=Uniform%281%29" alt="Uniform(1)" eeimg="1">
+<br>
+的均匀分布出发，用Inverse CDF 方法产生一系列独立的指数分布（参数为
+<img src="https://www.zhihu.com/equation?tex=%5Clambda" alt="\lambda" eeimg="1">
+<br>
+）随机数
+<img src="https://www.zhihu.com/equation?tex=X_i+%5Csim+exp%28%5Clambda%29" alt="X_i \sim exp(\lambda)" eeimg="1">
+<br>
+；
+<br>
+2，记
+<img src="https://www.zhihu.com/equation?tex=Y%3DX_1%2BX_2%2B...%2BX_k" alt="Y=X_1+X_2+...+X_k" eeimg="1">
+<br>
+。如果
+<img src="https://www.zhihu.com/equation?tex=Y%3Et" alt="Y>t" eeimg="1">
+<br>
+，则停止，输出
+<img src="https://www.zhihu.com/equation?tex=k-1" alt="k-1" eeimg="1">
+<br>
+；若否，则继续生成
+<img src="https://www.zhihu.com/equation?tex=X_%7Bk%2B1%7D" alt="X_{k+1}" eeimg="1">
+<br>
+，直到
+<img src="https://www.zhihu.com/equation?tex=Y%3Et" alt="Y>t" eeimg="1">
+<br>
+为止；
+<br>
+3，重复过程2。
+<br>
+<br>
+容易证明，输出的一系列整数
+<img src="https://www.zhihu.com/equation?tex=k" alt="k" eeimg="1">
+<br>
+就满足服从参数为
+<img src="https://www.zhihu.com/equation?tex=%5Cmu%3D%5Clambda+t" alt="\mu=\lambda t" eeimg="1">
+<br>
+的Poisson分布。
