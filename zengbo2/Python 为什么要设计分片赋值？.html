@@ -1,0 +1,5 @@
+<meta name="referrer" content="no-referrer" />
+<meta charset="utf-8" />
+a[:] 返回的是shallow copy。但是a[:]=[1,2] 这里的 a[:]不需要返回任何东西，这只是一个index的syntactic sugar。基本上属于楼上说的__SETITEM__(a,[:],[1,2])这样。这两者没有矛盾。
+<br>
+真正矛盾和麻烦的是在于python处理identity和deep copy的时候。

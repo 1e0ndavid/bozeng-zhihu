@@ -1,0 +1,9 @@
+<meta name="referrer" content="no-referrer" />
+<meta charset="utf-8" />
+这个问题我才疏学浅，只能从下面几个方面回答：
+<br>
+1，linear regression是个很大的题目，还有general linear regression。题主说的least square, 姑且认为是ordinary least square，那么其实很简单，就是证明了（在特定情况下）这个quadratic loss function估计出来的参数是blue （best linear unbiased estimator），指的是在所有linear，无偏 estimator当中，这个估计的结果是variance最小的。
+<br>
+2，加上regularizer的一个数学原因是1中参数估计的表达式存在inverse，如果存在multi-colinearity或者非唯一解，那么estimator 的数值解可能不存在／极不稳定。加入一个regularizer 可以保证inverse的非奇异性。
+<br>
+3，l1, l2都是可行的regularizer，唯一的区别可能就是l1得到的估计更加sparse。

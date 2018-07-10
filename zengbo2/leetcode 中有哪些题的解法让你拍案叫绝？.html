@@ -1,0 +1,29 @@
+<meta name="referrer" content="no-referrer" />
+<meta charset="utf-8" />
+<div class="highlight">
+	<pre>
+		<code class="language-python">
+<span></span><span class="k">def</span> <span class="nf">countPrimes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+        <span class="sd">"""</span>
+<span class="sd">        :type n: int</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        """</span>
+        <span class="c1"># build the prime table.</span>
+
+        <span class="k">if</span> <span class="n">n</span> <span class="o"><</span> <span class="mi">3</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mi">0</span>
+            
+        <span class="n">table</span> <span class="o">=</span> <span class="p">[</span><span class="bp">True</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
+        <span class="n">table</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="bp">False</span>
+        <span class="n">table</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="bp">False</span>
+        
+ 
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">n</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">table</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+                <span class="n">table</span><span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="n">i</span><span class="p">:</span><span class="n">n</span><span class="p">:</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="bp">False</span><span class="p">]</span><span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">table</span><span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="n">i</span><span class="p">:</span><span class="n">n</span><span class="p">:</span><span class="n">i</span><span class="p">])</span>
+        
+        <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">table</span><span class="p">)</span>
+</code>	</pre>
+</div>
+<br>
+所有其他写法都lte。。

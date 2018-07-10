@@ -1,0 +1,74 @@
+<meta name="referrer" content="no-referrer" />
+<meta charset="utf-8" />
+首先正面回答题主的问题：为什么android 选择Linux. Android 使用Linux 2.6作为内核主要有以下3各方面的原因：
+<br>
+<br>
+1- Portability: Linux runs on devices of diverse architecture from enormous machines like supercomputers to Large Hadron Collider to smaller devices like motor bikes and tiVo. This is due to the fact that Linux is an immensely portable platform. It is fairly easy to compile Linux on various hardware!
+<br>
+<br>
+Linux brings Android a level of hardware abstraction. Most parts particularly the low-level ones are written in portable C code that can be accessed and modified by manufacturer easily. This means manufacturers can pick up Android and modify it to adapt it according to their hardware requirements rather that improving the hardware to fit the software!
+<br>
+<br>
+2- Features: Linux brings to Android some useful features. The Linux Kernel 2.6 includes these features:
+<br>
+<br>
+Memory Management: While developing for mobile devices memory handling becomes a point of great concern. Thanks to Linux Kernel over which Android is built you can free yourself from the worry. Linux will handle Linux kernel forthreading and lowlevel memory management for Android. Linux kernel is responsible to manage the core feature of any mobile device i.e. memory cache. Linux kernel manages memory by allocating and de-allocating memory for the file system, processes, applications etc.
+<br>
+<br>
+Process Management: Linux Kernel is responsible to start stop and execute the program. For a beginner a process can be thought of as an instance of computer program. i.e. whenever a program is run on computer the OS creates its instance or process for it which is executed by the OS. In case of Android Linux is responsible to allocate resources to various processes that need them.
+<br>
+<br>
+Driver Model: As evident this is the layer where all the device specific drivers run. Here Linux ensures that your application is able to run on Android. Manufacturers/ hardware vendors can develop their drivers into Linux in a familiar environment. That is giving plenty room for hardware vendors to optimizing OS. This is one major reason Linux kernel was chosen for Android.
+<br>
+<br>
+File System Management: Linux also manages the file system which in turn controls the data storage service for android device.
+<br>
+<br>
+Network Stack: Linux Kernel is responsible to communicate with the network. It also controls networking stack, drivers, routing devices and network adapters.
+<br>
+<br>
+User account (Security): Linux kernel handles the security between application and the system. Linux takes control of authentication of users and is responsible for user management.Besides this Linux kernel is also responsible for power management and for undertaking various services like internet search, voice communication, system logging etc.
+<br>
+<br>
+3- Security: Linux runs in scientific research labs, supercomputers and systems for mission critical tasks. Android completely relies on Linux for security. All android applications run as distinct Linux processes under permissions set by Linux system.
+<br>
+<br>
+Above all, Linux is the poster child of open source and Linux is freely available! Its interesting to note that while Android has gained quiet momentum the former popular PALM smartphone running WebOS were also built on Linux kernel!
+<br>
+<br>
+<br>
+以上引用自
+<a href="https://link.zhihu.com/?target=http%3A//www.unixmen.com/why-is-android-built-on-linux-kernel/" class=" external" target="_blank" rel="nofollow noreferrer">
+	<span class="invisible">
+		http://www.
+	</span>
+	<span class="visible">
+		unixmen.com/why-is-andr
+	</span>
+	<span class="invisible">
+		oid-built-on-linux-kernel/
+	</span>
+	<span class="ellipsis">
+	</span>
+	<i class="icon-external">
+	</i>
+</a>
+<br>
+<br>
+苹果打算开发过自己的内核，Copland.（历史上最大的流产的科技计划）后来直接放弃转而买了jobs 的nextstep . 最终其实还是用到了Unix. 
+<br>
+从Unix 的历史不难看到，当时造轮子的环境已经过去了。虽然你现在轻而易举的可以再在造一个，就好比你可以轻而易举的去做当年的X射线实验，光电实验，小球落地实验。可是已经毫无价值和必要了。计算机科学里面Unix当年已经解决了操作系统内核的关键问题，现在人类文明从整体来看应该是不断发展他，而 不是浪费时间再去做一个其实等价的玩意。
+<br>
+除非你能提出一个全新的体系结构（非X86），能效上有巨大提高。否则你写来写去发现就是那几个一样的算法和那几个一样的系统层的函数。无非把名字换一下，有意思吗。
+<br>
+<br>
+好比量子力学可以有很多种数学模型，但薛定谔方程已经用了，效果还很好，其他模型的效果并不比他更好，还费事。这样一来，整个人类就用上了薛定锷方程。
+<br>
+<br>
+更具体的比方是，matlab 用上了很多数值计算的方法，特别是矩阵之流。你可以用你的知识重写一个，但是除了浪费了你大量的时间和提高了自己的水平以外，对社会经济没有贡献。
+<br>
+Comsol 用了很多pde 的解法，也有meshing . 你也可以用自己学到的知识重新写一个，但是除了浪费了你大量的时间和提高了自己的水平以外，对社会经济没有贡献。
+<br>
+The list goes on.
+<br>
+除非你提出了新的计算机体系，发明一个新内核就是一个假装忘记人类现有的知识自己借鉴之后邀功的无聊行为

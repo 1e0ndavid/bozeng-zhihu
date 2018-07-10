@@ -1,0 +1,73 @@
+<meta name="referrer" content="no-referrer" />
+<meta charset="utf-8" />
+在python中, parameter sent to function 使用的全部是 by object。
+<br>
+也就是，这无法通过by value或者 by reference 来定义。这是python的独到之处。
+<br>
+如果object本身是immutable的，例如一个不是太长的整数，那么你可以看作是传值。因为每一次对这个object赋值，都会创建一个新的object，如下：
+<br>
+<br>
+<blockquote>
+	a=10
+	<br>
+	<br>
+	def function1(value):
+	<br>
+	   value=20
+	<br>
+	   print(value)
+	<br>
+	<br>
+	function1(a)
+	<br>
+	<br>
+	print(a)
+</blockquote>
+结果是
+<br>
+<blockquote>
+	20
+	<br>
+	10
+</blockquote>
+虽然传过去的是a这个object，但当function1对a赋值的时候，其实他并没有改变a，而是创建了一个新的object，这个object叫做value了。global当中的a并没有变。
+<br>
+<br>
+如果object本身是mutable，例如一个list，因为每一次对这个object赋值，都会改变这个object本身。那么就可以看作是传reference。如下：
+<br>
+<br>
+<blockquote>
+	a=[10,11,12,13]
+	<br>
+	<br>
+	def function1(value):
+	<br>
+	   value[1:3]=[]
+	<br>
+	   print(value)
+	<br>
+	<br>
+	function1(a)
+	<br>
+	<br>
+	print(a)
+</blockquote>
+结果是
+<br>
+<blockquote>
+	[10,13]
+	<br>
+	[10,13]
+</blockquote>
+<br>
+。。答到一半，看了下题目好像答非所问了。
+<br>
+<br>
+题目问的问题其实更简单。
+<br>
+list.reverse 是一个in-place method。也就是说，reverse是在原来object上操作，而不会创造一个新的object。上面t=s，按照python传object的标准，那么就是t=s 是同一个object。.reverse作用在这个object上，那么t,s都变了。他们只是名字而已。
+<br>
+<br>
+而slicing [::] 这个，会创造一个新的object。所以。自然啦。
+<br>
+最好的办法是deep copy
