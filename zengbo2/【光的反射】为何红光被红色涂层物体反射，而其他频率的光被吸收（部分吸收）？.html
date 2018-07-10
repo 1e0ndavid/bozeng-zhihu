@@ -1,0 +1,52 @@
+<meta name="referrer" content="no-referrer" />
+<meta charset="utf-8" />
+这样理解可能比较适合。
+<br>
+maxwell方程组宏观表现为边界条件。由边界条件假定平面波入射／反射（也就是，一组傅立叶空间的本征解）时候，可以得到如下关系：
+<br>
+<img src="https://www.zhihu.com/equation?tex=r%3D%281-n%29%2F%28n%2B1%29" alt="r=(1-n)/(n+1)" eeimg="1">
+<br>
+. 这里的r是反射振幅系数。
+<br>
+<br>
+其中n是平面波从真空是入射到的那个新介质的折射率。
+<br>
+1. 如果n=1，反射＝0。也就是说，如果从真空射到真空，是不会有反射的。从微波的术语说，是因为阻抗匹配。
+<br>
+2. 如果n>1，r<0。在复平面看，反射的相位是pi。所谓光疏到光密反射引入180度的相位差。
+<br>
+3. 如果n<1，r>0。在复平面看，反射的相位是0。所谓光密到光疏反射没有相位差。
+<br>
+<br>
+现在假定n>1。这是存在自然介质的一般情况。这样，当n越大，从真分数的定理可知，r越大。
+<br>
+那么什么是n呢？什么决定了n呢？
+<br>
+<br>
+从maxwell方程组我们知道，
+<img src="https://www.zhihu.com/equation?tex=n%3D%5Csqrt%7B%5Cepsilon%7D" alt="n=\sqrt{\epsilon}" eeimg="1">
+<br>
+.
+<br>
+什么是
+<img src="https://www.zhihu.com/equation?tex=%5Cepsilon+" alt="\epsilon " eeimg="1">
+<br>
+呢。
+<img src="https://www.zhihu.com/equation?tex=%5Cepsilon+" alt="\epsilon " eeimg="1">
+<br>
+是电介系数。通俗地说，
+<img src="https://www.zhihu.com/equation?tex=%5Cepsilon+" alt="\epsilon " eeimg="1">
+<br>
+由组成物质的电子所处的晶体环境决定。把固体中的电子想象成处在一定的势阱中。在这个势阱里，电子有自己的特征振动频率（类似简单谐振）。
+<br>
+<br>
+如果入射光进入物质，振动的电场会给电子施加外力，产生所谓受迫振动。当电场的振动频率接近电子的特征频率时，会发生共振。电子振动的幅度变大，电介系数变大。
+<br>
+<br>
+从一定程度上说，电介系数就是电子在一定频率入射光照射下的响应程度。由此可见
+<img src="https://www.zhihu.com/equation?tex=%5Cepsilon+" alt="\epsilon " eeimg="1">
+<br>
+ 和频率有关系，是频率的函数。
+<br>
+<br>
+这样，n也是频率的函数。可以理解，n在某一个频率最大（共振）。一般来说，n随着频率的函数，是一个lorentz函数（delta函数的耗散版，其全宽半高由耗散的系数决定，或者又叫质量因素，品质因素Q），其最大值就在特征频率处。可以想见，只需要找到或者设计一种材料，使得电子在分子中的特征频率接近红光的频率（c/700nm），就能造成n在红光频率中极大，物质主要反射红光的效果了。
