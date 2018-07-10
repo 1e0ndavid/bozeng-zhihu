@@ -1,0 +1,28 @@
+<meta name="referrer" content="no-referrer" />
+<meta charset="utf-8" />
+我们正在写一个可见即可得的web based latex editor。你可以按照tex的语法输入命令，但是你看到的是存在光标和类word wysiwyg文档。譬如，你输入^那么光标就跑到上标上去了。你输入\frac就跑出一个分数框。难度在于如何typesetting，我们决定采用和tex一样的办法，所以效果应该一样。具体不能再多说了。。。
+<br>
+总的来说，你可以认为我们把tex引擎用js重新写了一遍。。考虑到tex引擎完成的年代（1960？），和现代计算机的处理速度，我们认为完全有必要抛弃tex后编译的落后方式，进入交互式编译的阶段。交互式编译的代价就是换一种语言写这个引擎，这里我们选择了javascript。
+<br>
+承蒙许多人关注，现在把非常原始的效果图放上来看一下：
+<br>
+<img src="https://pic1.zhimg.com/9ffef0147a51577cd50b5b922cd9ee88_b.jpg" data-rawwidth="720" data-rawheight="194" class="origin_image zh-lightbox-thumb" width="720" data-original="https://pic1.zhimg.com/9ffef0147a51577cd50b5b922cd9ee88_r.jpg">
+<img src="https://pic4.zhimg.com/1defc0cd4b6801dbb2f122e4c6ce28cb_b.jpg" data-rawwidth="720" data-rawheight="212" class="origin_image zh-lightbox-thumb" width="720" data-original="https://pic4.zhimg.com/1defc0cd4b6801dbb2f122e4c6ce28cb_r.jpg">
+<img src="https://pic1.zhimg.com/7e6a50135954e37b73acbc4bc97743c4_b.jpg" data-rawwidth="720" data-rawheight="87" class="origin_image zh-lightbox-thumb" width="720" data-original="https://pic1.zhimg.com/7e6a50135954e37b73acbc4bc97743c4_r.jpg">
+<br>
+最近加入的功能：
+<br>
+<img src="https://pic3.zhimg.com/46c939b3f0815a258cce70bb43915a3a_b.jpg" data-rawwidth="1216" data-rawheight="654" class="origin_image zh-lightbox-thumb" width="1216" data-original="https://pic3.zhimg.com/46c939b3f0815a258cce70bb43915a3a_r.jpg">
+<br>
+在产品还没有做完全之前放出预览是很不明智的行为，实际上关于如何确保js的安全性我们也还在探讨之中，在产品内容和安全性完善之前不会上线，而且一定会加入服务器端的内容。但起码，以上的示范表明这一切都是可以实现的。
+<br>
+<br>
+注意蓝色的竖线为光标。
+<br>
+<br>
+一个类似效果的本地编译器是lyx，不过他做的并不完整，只支持math mode下的命令输入。而且界面不是很好，存在bug，需要预先安装tex包，不是web-based。。
+<br>
+这个问题晚个半年－1年问可能就有答案了。。。
+<br>
+<br>
+ps：希望有实力的同行参与竞争，但不要抄袭。。

@@ -1,0 +1,70 @@
+<meta name="referrer" content="no-referrer" />
+<meta charset="utf-8" />
+许多事情的发生都有所谓“平均时间”，或者“时间常数”。例如一个原子里的电子跃迁发射光子这件事，大概平均
+<img src="https://www.zhihu.com/equation?tex=%5Ctau" alt="\tau" eeimg="1">
+<br>
+这个时间就会发射一个光子。
+<br>
+那么假定这个时间常数是
+<img src="https://www.zhihu.com/equation?tex=%5Ctau%3D1%2F%5Clambda+" alt="\tau=1/\lambda " eeimg="1">
+<br>
+，发射一个光子所需要的时间，就服从指数分布
+<img src="https://www.zhihu.com/equation?tex=%5Clambda+e%5E%7B-%5Clambda+t%7D" alt="\lambda e^{-\lambda t}" eeimg="1">
+<br>
+（注1）。那么，在总时间
+<img src="https://www.zhihu.com/equation?tex=T" alt="T" eeimg="1">
+<br>
+里，发射
+<img src="https://www.zhihu.com/equation?tex=k" alt="k" eeimg="1">
+<br>
+个光子的概率，就满足泊松分布：
+<br>
+<img src="https://www.zhihu.com/equation?tex=k%5Csim+Pois%28%5Clambda+T%29" alt="k\sim Pois(\lambda T)" eeimg="1">
+<br>
+显而易见，
+<img src="https://www.zhihu.com/equation?tex=k" alt="k" eeimg="1">
+<br>
+的平均值就是
+<img src="https://www.zhihu.com/equation?tex=%5Clambda+T" alt="\lambda T" eeimg="1">
+<br>
+<img src="https://www.zhihu.com/equation?tex=Gamma" alt="Gamma" eeimg="1">
+<br>
+分布是泊松分布的“逆分布”。泊松分布是给定概率
+<img src="https://www.zhihu.com/equation?tex=%5Clambda" alt="\lambda" eeimg="1">
+<br>
+和等待时间
+<img src="https://www.zhihu.com/equation?tex=T" alt="T" eeimg="1">
+<br>
+，算在此时间内事件发生的次数
+<img src="https://www.zhihu.com/equation?tex=k" alt="k" eeimg="1">
+<br>
+的分布；而
+<img src="https://www.zhihu.com/equation?tex=Gamma" alt="Gamma" eeimg="1">
+<br>
+则是反过来，给定概率
+<img src="https://www.zhihu.com/equation?tex=%5Clambda" alt="\lambda" eeimg="1">
+<br>
+和发生次数
+<img src="https://www.zhihu.com/equation?tex=k" alt="k" eeimg="1">
+<br>
+，算等待时间
+<img src="https://www.zhihu.com/equation?tex=T" alt="T" eeimg="1">
+<br>
+的分布。很显然，
+<img src="https://www.zhihu.com/equation?tex=T" alt="T" eeimg="1">
+<br>
+的平均值就是
+<img src="https://www.zhihu.com/equation?tex=k%2F%5Clambda+" alt="k/\lambda " eeimg="1">
+<br>
+。这样的
+<img src="https://www.zhihu.com/equation?tex=Gamma" alt="Gamma" eeimg="1">
+<br>
+分布写作：
+<br>
+<img src="https://www.zhihu.com/equation?tex=Gamma%28k%2C+%5Clambda%29" alt="Gamma(k, \lambda)" eeimg="1">
+<br>
+什么公交车，客人，原子衰变，都服从这些定律。
+<br>
+<br>
+注1：当然，这里省略了很多附加假设。最主要的假设是：
+<img src="https://www.zhihu.com/equation?tex=%5Cdelta+N%28t%29%3D%5Clambda+N%28t%29" alt="\delta N(t)=\lambda N(t)" eeimg="1">

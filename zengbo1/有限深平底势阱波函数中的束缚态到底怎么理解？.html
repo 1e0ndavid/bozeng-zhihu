@@ -1,0 +1,28 @@
+<meta name="referrer" content="no-referrer" />
+<meta charset="utf-8" />
+你所求解是只是一个schrodinger 方程的eigensolution。这个eigensolution在无穷大v(x)的地方，必须也是0否则那一点函数的值无穷大了，那么这个解没有意义（具体参见线性代数，hilbert space和hermitian operator什么的）。在v(x)不是无穷大的地方，其解满足schrodinger equation。
+<br>
+至于束缚态，无非是函数本身在real space 存在界限而已（不随时间变化）。
+<br>
+<ol>
+	<li>
+		例如
+		<img src="https://www.zhihu.com/equation?tex=f%28x%29%3De%5E%7Bix%7D" alt="f(x)=e^{ix}" eeimg="1">
+		<br>
+		就是无界的（平面波），也是不可被归一化的。一说他不存在于hilbert space中。
+		<br>
+	</li>
+	<li>
+		对于另外的函数例如
+		<img src="https://www.zhihu.com/equation?tex=f%28x%29%3De%5E%7B-x%5E2%7De%5E%7Bix%7D" alt="f(x)=e^{-x^2}e^{ix}" eeimg="1">
+		<br>
+		，这样的高斯函数，就是有界的。这就是“束缚态”。
+		<br>
+	</li>
+	<li>
+		对于另外的函数例如
+		<img src="https://www.zhihu.com/equation?tex=f%28x%29%3De%5E%7B-%28x-ct%29%5E2%7De%5E%7Bi%28x-t%5Comega%29%7D" alt="f(x)=e^{-(x-ct)^2}e^{i(x-t\omega)}" eeimg="1">
+		<br>
+		。这个函数是有界的，但其边界随时间演化而移动，因此不是束缚态。
+	</li>
+</ol>
