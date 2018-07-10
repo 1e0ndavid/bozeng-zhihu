@@ -1,0 +1,39 @@
+<meta name="referrer" content="no-referrer" />
+<meta charset="utf-8" />
+你这个问题很复杂。
+<br>
+首先两个问题的定义就不清楚。
+<br>
+对于dc做功，joule's law 告诉我们，你首先需要知道电流。假设食物的dc 电导率是
+<img src="https://www.zhihu.com/equation?tex=%5Csigma_%7BDC%7D" alt="\sigma_{DC}" eeimg="1">
+<br>
+，食物的三维结构是横截面
+<img src="https://www.zhihu.com/equation?tex=A" alt="A" eeimg="1">
+<br>
+以及长度
+<img src="https://www.zhihu.com/equation?tex=l" alt="l" eeimg="1">
+<br>
+，我们可以知道在恒定电压
+<img src="https://www.zhihu.com/equation?tex=V" alt="V" eeimg="1">
+<br>
+下，电热功率是：
+<br>
+<img src="https://www.zhihu.com/equation?tex=V%5E2%2FR%3DV%5E2S%3DV%5E2A%5Csigma_%7BDC%7D%2Fl" alt="V^2/R=V^2S=V^2A\sigma_{DC}/l" eeimg="1">
+<br>
+<br>
+对于ac做功，我们首先需要知道你这个220v的电压能有多少转化成微波。假设微波炉工作电流是10A，假设阻抗匹配，那么有最多220v*10A/2=1100W的微波功率。（实际值肯定远小于此最佳值）
+<br>
+然后考虑水分子的在微波频率下的absorption coefficient=cross section*concentration=
+<img src="https://www.zhihu.com/equation?tex=%5Csigma_%7BAC%7D+C+%28m%5E%7B-1%7D%29" alt="\sigma_{AC} C (m^{-1})" eeimg="1">
+<br>
+ ，乘以微波在食物中前行的距离
+<img src="https://www.zhihu.com/equation?tex=l" alt="l" eeimg="1">
+<br>
+，除以微波在食物中的传播速度 
+<img src="https://www.zhihu.com/equation?tex=c" alt="c" eeimg="1">
+<br>
+，就知道吸收功率：
+<br>
+<img src="https://www.zhihu.com/equation?tex=VI%2F2+e%5E%7B-%7B%5Csigma_%7BAC%7D+C+l%7D%7D%2Fc" alt="VI/2 e^{-{\sigma_{AC} C l}}/c" eeimg="1">
+<br>
+这两者在不知道精确数值的时候是难以比较的。实际上因为水的dc电阻比较高，ac吸收比较强，我认为微波的吸收效率更高。
