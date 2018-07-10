@@ -1,0 +1,3 @@
+<meta name="referrer" content="no-referrer" />
+<meta charset="utf-8" />
+如果是线性可分的SVM 已经很好了。如果不是线性可分，你也可以加Kernel ，但是会存在overfitting . 如果你要看效果，建议cross validation 而不是只测试99个。如果你知道class conditional , 可以用基于bayes 的logistic 或 linear/quadratic  discriminative analysis .具体要看谁的cross validation 效果好
