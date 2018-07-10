@@ -1,0 +1,45 @@
+<meta name="referrer" content="no-referrer" />
+<meta charset="utf-8" />
+在数值计算权威Mathematica中：
+<br>
+（参考
+<a href="https://link.zhihu.com/?target=https%3A//reference.wolfram.com/language/tutorial/SomeNotesOnInternalImplementation.html%237441" class=" wrap external" target="_blank" rel="nofollow noreferrer">
+	Some Notes on Internal Implementation
+	<i class="icon-external">
+	</i>
+</a>
+ ）
+<br>
+如果是整数的power 运算，进行所谓的binary exponentiation。也就是把任意次数的power 转化成平方计算。
+<br>
+例如：
+<br>
+<img src="https://www.zhihu.com/equation?tex=5%5E%7B81%7D%3D5%2A5%5E%7B80%7D%3D5%2A%285%5E%7B40%7D%29%5E2%3D5%2A%28%285%5E%7B20%7D%29%5E2%29%5E2%0A%3D5%2A%28%28%285%5E%7B10%7D%29%5E2%29%5E2%29%5E2%3D5%2A%28%28%28%285%5E5%29%5E2%29%5E2%29%5E2%29%5E2%3D5%2A%28%28%28%285%2A5%5E4%29%5E2%29%5E2%29%5E2%29%5E2%3D5%2A%28%28%28%285%2A%285%5E2%29%5E2%29%5E2%29%5E2%29%5E2%29%5E2" alt="5^{81}=5*5^{80}=5*(5^{40})^2=5*((5^{20})^2)^2
+=5*(((5^{10})^2)^2)^2=5*((((5^5)^2)^2)^2)^2=5*((((5*5^4)^2)^2)^2)^2=5*((((5*(5^2)^2)^2)^2)^2)^2" eeimg="1">
+<br>
+这样乘法的次数基本缩减到了log(n),n是指数的大小。
+<br>
+<br>
+<div class="highlight">
+	<pre>
+		<code class="language-python">
+<span></span><span class="k">def</span> <span class="nf">exponen</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">exponent</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">base</span><span class="o">==</span><span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">base</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+
+    <span class="n">result</span><span class="o">=</span><span class="mi">1</span>
+
+    <span class="k">while</span> <span class="n">exponent</span><span class="o">></span><span class="mi">0</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">exponent</span><span class="o">&</span><span class="mi">1</span><span class="p">:</span>
+            <span class="n">result</span><span class="o">=</span><span class="n">result</span><span class="o">*</span><span class="n">base</span>
+        <span class="n">exponent</span><span class="o">=</span><span class="n">exponent</span><span class="o">>></span><span class="mi">1</span>
+        <span class="n">base</span><span class="o">=</span><span class="n">base</span><span class="o">**</span><span class="mi">2</span>
+
+    <span class="k">return</span> <span class="n">result</span>
+</code>	</pre>
+</div>
+<br>
+<br>
+如果是开方或者非整数次方，采用的是牛顿法。

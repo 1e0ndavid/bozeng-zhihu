@@ -1,0 +1,70 @@
+<meta name="referrer" content="no-referrer" />
+<meta charset="utf-8" />
+i和j都是-1的两个根，实际上，i=-j。下面我将会详细介绍这个不同学科之间，符号差异的成因。
+<br>
+<a class="member_mention" data-hash="6ef2e77274cb0719253a577665cf690e" href="https://www.zhihu.com/people/6ef2e77274cb0719253a577665cf690e" data-hovercard="p$b$6ef2e77274cb0719253a577665cf690e">
+	@Ivony
+</a>
+ 
+<a class="member_mention" data-hash="c8b23177ec096bda89bf5a53d4e7f8fc" href="https://www.zhihu.com/people/c8b23177ec096bda89bf5a53d4e7f8fc" data-hovercard="p$b$c8b23177ec096bda89bf5a53d4e7f8fc">
+	@曹洪洋
+</a>
+ 
+<a class="member_mention" data-hash="8d06e98d3bd9780ff0457b8c5a23c2b4" href="https://www.zhihu.com/people/8d06e98d3bd9780ff0457b8c5a23c2b4" data-hovercard="p$b$8d06e98d3bd9780ff0457b8c5a23c2b4">
+	@睿睿
+</a>
+ 
+<br>
+请首先允许我回顾上面几位的回答：
+<br>
+<br>
+把i写成j当然是出于避免混淆电流的目的，
+<a class="member_mention" data-editable="true" data-title="@陳浩" data-hash="828d10598f89ef5a5d68a41634c8c220" href="https://www.zhihu.com/people/828d10598f89ef5a5d68a41634c8c220" data-hovercard="p$b$828d10598f89ef5a5d68a41634c8c220">
+	@陳浩
+</a>
+ 引用的wikipedia非常值得参考，i=j只是在某些工程软件中为了采用的等价处理（MATLAB）。但很多时候，wiki的答案并非就是毫无遗漏的。
+<br>
+<br>
+在考虑虚数单位，也就是-1的根的时候，我们只需要考虑其中任意一个即可，因为我们只要用到x^2=-1这个结果。物理和数学上我们用i，工程上用j，回答到此为止很完美。不过如果是这么简单，我也不必多此一举在此回答了，
+<a class="member_mention" data-hash="48e0bc572598855794de9dbade9c75d6" href="https://www.zhihu.com/people/48e0bc572598855794de9dbade9c75d6" data-hovercard="p$b$48e0bc572598855794de9dbade9c75d6">
+	@王文琪
+</a>
+ 前面几位都回答的很好。但为了补充他们的答案，我觉得还是有必要写一写。
+<br>
+<br>
+实际上，工程上把i换成j时，还是暗含了一个-号，关于这一点，请参考《
+<b>
+	电路原理fundamentals of circuits
+</b>
+》中关于AC HARMONIC 的记号标准jwt，对比它的时间部分和物理上HARMONIC振动的时间部分的区别（-iwt），就可以确认。fundamentals of circuits是电气工程学内最权威的教材，物理上的lorentz 模型通用取法都是-iwt，我们可以找jackson的electrodynamics做对比，这也是电磁学最通用的教材。因此我认为，合理的回答应该是j=-i。
+<br>
+<br>
+可是我们不禁要问，为什么？
+<br>
+<br>
+这是因为在物理和数学中，因为根据习惯选取了响应函数的因果顺序（也就是极点在复平面的位置），把相位的时间部分定为-i。因此一般我们在物理上都看到一个波的描述就是
+<b>
+	exp(-iwt)
+</b>
+。。然而在工程上，因为处理的方便（相量法）我们一般把时间部分写成j，我们都会把波描述成：
+<b>
+	exp(jwt)
+</b>
+，目的就是保证分析时候频率前面是正数而已。把-1开根号的时候，实际上有两个选择，一个是i, 一个是-i。这个定义虚数的方程因为是2次方程，
+<b>
+	实际上有2个解
+</b>
+。
+<b>
+	j=-i
+</b>
+，j其实就是i的孪生姐妹罢了。
+<br>
+<br>
+当然这个细节并不重要，因为它在一般数值计算时，并不影响结果；但在物理计算时，会让你的一些计算符号变反（例如你会发现材料不但不吸收光，反而自动发射光等一系列违反事实的结论），问题很大。因此楼上的回答是完全正确的，但我还是要坚持补充。
+<br>
+<br>
+最后废话一段
+<br>
+<br>
+工程上之所以选择j，更主要的是为了保证工程上频率前面的符号是正，这更符合工程分析的要求。这是历史原因，因为当时选哪一个，对结果都没有影响，一个用了j，一个用了i。最后大家长征汇合的时候，对了一对，发现原来你的j就是我的-i，我的i就是你的-j。就是这么来的。这个j只是一个符号，EE那群人最开始还可以用A，B，C，D，E。。。但这不妨碍A=-i这个结果。

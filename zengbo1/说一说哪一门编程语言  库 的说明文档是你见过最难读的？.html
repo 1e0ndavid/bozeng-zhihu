@@ -1,0 +1,69 @@
+<meta name="referrer" content="no-referrer" />
+<meta charset="utf-8" />
+Matlab:
+<br>
+随手摘抄：
+<br>
+<p>
+	Define z as a vector of eigenvalues of a random matrix.
+</p>
+<div class="highlight">
+	<pre>
+		<code class="language-matlab">
+<span></span><span class="n">z</span> <span class="p">=</span> <span class="n">eig</span><span class="p">(</span><span class="nb">randn</span><span class="p">(</span><span class="mi">20</span><span class="p">));</span>
+</code>	</pre>
+</div>
+<p>
+	Plot the imaginary part of z versus the real part of z. Display a circle at each data point.
+</p>
+<div class="highlight">
+	<pre>
+		<code class="language-matlab">
+<span></span><span class="n">figure</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">z</span><span class="p">,</span><span class="s">'o'</span><span class="p">)</span>
+</code>	</pre>
+</div>
+<p>
+	<b>
+		Plot Multiple Complex Inputs
+	</b>
+</p>
+<p>
+	This example shows how to plot the imaginary part versus the real part of two complex vectors, z1 and z2. If you pass multiple complex arguments to plot, such as plot(z1,z2), then MATLAB® ignores the imaginary parts of the inputs and plots the real parts. To plot the real part versus the imaginary part for multiple complex inputs, you must explicitly pass the real parts and the imaginary parts to plot.
+</p>
+<p>
+	Define the complex data.
+</p>
+<div class="highlight">
+	<pre>
+		<code class="language-text">
+<span></span>x = -2:0.25:2;
+z1 = x.^exp(-x.^2);
+z2 = 2*x.^exp(-x.^2);
+</code>	</pre>
+</div>
+<p>
+	Find the real part and imaginary part of each vector using the real and imag functions. Then, plot the data.
+</p>
+<div class="highlight">
+	<pre>
+		<code class="language-matlab">
+<span></span><span class="n">real_z1</span> <span class="p">=</span> <span class="nb">real</span><span class="p">(</span><span class="n">z1</span><span class="p">);</span>
+<span class="n">imag_z1</span> <span class="p">=</span> <span class="nb">imag</span><span class="p">(</span><span class="n">z1</span><span class="p">);</span>
+
+<span class="n">real_z2</span> <span class="p">=</span> <span class="nb">real</span><span class="p">(</span><span class="n">z2</span><span class="p">);</span>
+<span class="n">imag_z2</span> <span class="p">=</span> <span class="nb">imag</span><span class="p">(</span><span class="n">z2</span><span class="p">);</span>
+
+<span class="n">plot</span><span class="p">(</span><span class="n">real_z1</span><span class="p">,</span><span class="n">imag_z1</span><span class="p">,</span><span class="s">'g*'</span><span class="p">,</span><span class="n">real_z2</span><span class="p">,</span><span class="n">imag_z2</span><span class="p">,</span><span class="s">'bo'</span><span class="p">)</span>
+</code>	</pre>
+</div>
+<br>
+你能看懂为什么是g* bo嘛。你能看懂好好的plot(z) tmd就同时plot 实部和虚部吗？而且这字体，这排版。
+<br>
+对比下mathematica的文档。。呵呵。
+<br>
+<br>
+tex
+<br>
+<br>
+tex的程序文档估计没人愿意看，是knuth写的。
